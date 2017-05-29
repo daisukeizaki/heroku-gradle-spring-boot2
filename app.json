@@ -1,11 +1,10 @@
 {
-  "name": "Start on Heroku: Java",
-  "description": "A barebones Java app, which can easily be deployed to Heroku.",
-  "addons": [ "heroku-postgresql" ],
-  "environments": {
+  "name": "Start on Heroku: Java"
+  ,"description": "A barebones Java app, which can easily be deployed to Heroku."
+  ,"addons": [ "heroku-postgresql" ]
+  ,"environments": {
     "test": {
       "scripts": {
-        "test-setup": "./gradlew build -x test",
         "test": "./gradlew test"
       }
     }
