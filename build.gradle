@@ -36,6 +36,7 @@ dependencies {
 //  testCompile group: 'org.hamcrest', name: 'hamcrest-library', version: '1.3'
   compile("org.springframework.boot:spring-boot-starter-web")
   compile("org.springframework.boot:spring-boot-starter-actuator")
+  testCompile("junit:junit")
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -49,5 +50,5 @@ task stage(type: Copy, dependsOn: [clean, build]) {
 stage.mustRunAfter(clean)
 
 clean << {
-    project.file('app.jar').delete()
+    project.file('testapp.jar').delete()
 }
